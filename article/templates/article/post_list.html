@@ -14,7 +14,7 @@
 		<div>
 			<p>published: {{ article.published_date }}</p>
 			<h1><a href="">{{ article.title }}</a></h1>
-			<p>{{ article.text|linebreaks }}</p>
+			<p>{{ article.text|safe|linebreaks }}</p>
 		</div>
 		{% endfor %}
     </body>
