@@ -1,3 +1,5 @@
+{% load account_tags %}
+
 <html>
     <head>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -9,7 +11,9 @@
         <div>
             <h1><a href="">Concent</a></h1>
         </div>
-
+		{% if user.is_authenticated %}
+			Welcome {% user_display request.user %}!
+		{% endif %}
         {% for article in articles %}
 		<div>
 			<p>published: {{ article.published_date }}</p>
