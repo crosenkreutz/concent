@@ -4,4 +4,5 @@ conenv
 db.sqlite3
 /static
 /media
+/tmp
 .DS_Store

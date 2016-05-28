@@ -128,9 +128,10 @@ USE_TZ = True
 ACCOUNT_OPEN_SIGNUP = True
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 
-# Setting Email sending to stdout for development
+# Setting Email sending to file for development
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp/emails_testing')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
